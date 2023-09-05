@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -11,6 +11,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <script src="src/js/index.js" defer></script>
     <title>Document</title>
 </head>
 
@@ -26,40 +27,55 @@
 
             <nav class="menu-desktop">
                 <ul>
-                    <li><a href="#">Início</a></li>
-                    <li><a href="#">Especialidades</a></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Projetos</a></li>
+                    <li><a href="#init">Início</a></li>
+                    <li><a href="#especs">Especialidades</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#projects">Projetos</a></li>
                 </ul>
             </nav>
 
-            <div class="btn-contato">
-                <a href="#"><button>Contato</button></a>
+            <div class="btn-abrir-menu">
+                <i class="bi bi-list"></i>
             </div>
+            <div class="btn-contato">
+                <a href="#contact"><button>Contato</button></a>
+            </div>
+
+            <div class="menu-mobile" id="menu-mobile">
+                <div class="btn-fechar">X</div>
+                <nav>
+                    <ul>
+                        <li><a href="#init">Início</a></li>
+                        <li><a href="#especs">Especialidades</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#projects">Projetos</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="overlay-menu"></div>
         </div>
     </header>
 
     <main>
-        <section class="topo-do-site">
+        <section id="init" class="topo-do-site">
             <div class="interface">
                 <div class="flex">
                     <div class="txt-topo-site">
                         <h2>TRANSFORMANDO IDEIAS EM REALIDADE DIGITAL<span>.</span></h2>
-                        <p>Criatividade e inovação andam lado a lado. Com uma conbina única de design impactante,
-                            funcionalidade intuitiva e otimização para resultado, estou pronto para criar a presença
-                            online dos seus sonhos.</p>
+                        <p>Criatividade e inovação andam lado a lado. Com uma conbinação única de design impactante, funcionalidade intuitiva e otimização para resultado, estou pronto para criar a presença online dos seus sonhos.</p>
                         <div class="btn-contato">
                             <a href="#"><button>Entre em contato</button></a>
                         </div>
                     </div>
                     <div class="img-topo-site">
-                        <img src="src/images/pessoa.png" alt="">
+                        <img src="src/images/mulher3.jpg" alt="">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="especs">
+        <section id="especs" class="especs">
             <div class="interface">
                 <h2 class="title">MINHAS <span>ESPECIALIDADES</span></h2>
                 <div class="flex">
@@ -73,13 +89,11 @@
                     <div class="box-especs">
                         <i class="bi bi-cart3"></i>
                         <h3>Loja online</h3>
-                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, laboriosam commodi! Laudantium
-                            quas totam cum, perferendis quos voluptatibus laboriosam illo iusto laborum molestiae!
-                            Placeat beatae esse quae nam, deleniti reprehenderit?</p>
+                        <p>Lojas online completa, para aumentar seus canais de venda, oferecendo a seus clientes a comodidade de uma loja online, com um painel administrativo simples e intuitivo para cadastrar, editar, controlar estoques e receber pedidos dos usuarios do site facilitando e aumentando suas vendas.</p>
                     </div>
                     <div class="box-especs">
                         <i class="bi bi-wordpress"></i>
-                        <h3>Loja online</h3>
+                        <h3>Blog</h3>
                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, laboriosam commodi! Laudantium
                             quas totam cum, perferendis quos voluptatibus laboriosam illo iusto laborum molestiae!
                             Placeat beatae esse quae nam, deleniti reprehenderit?</p>
@@ -88,7 +102,7 @@
             </div>
         </section>
 
-        <section class="sobre">
+        <section id="sobre" class="sobre">
             <div class="interface">
                 <div class="flex">
                     <div class="img-sobre">
@@ -117,7 +131,7 @@
             </div>
         </section>
 
-        <section class="portifolio">
+        <section id="projects" class="portifolio">
             <div class="interface">
                 <h2 class="title">MEU <span>PORTIFÓLIO.</span></h2>
                 <div class="flex">
@@ -134,7 +148,37 @@
             </div>
         </section>
 
-        <section class="form">
+        <section class="certs">
+            <div class="interface">
+                <h2 class="title">MEUS <span>CERTIFICADOS.</span></h2>
+                <div>
+                    <img src="src/images/certificados/certificado-1.webp" alt="">
+                    <img src="src/images/certificados/certificado-2.webp" alt="">
+                    <img src="src/images/certificados/certificado-3.webp" alt="">
+                    <img src="src/images/certificados/certificado-4.webp" alt="">
+                    <img src="src/images/certificados/certificado-5.webp" alt="">
+                    <div class="img-lenght">
+                        <span>+3</span>
+                        <img src="src/images/certificados/certificado-6.webp" alt="">
+                    </div>
+                    <img style="display: none;" src="src/images/certificados/certificado-7.webp" alt="">
+                    <img style="display: none;" src="src/images/certificados/certificado-8.webp" alt="">
+                    <img style="display: none;" src="src/images/certificados/certificado-9.webp" alt="">
+                </div>
+            </div>
+            
+        </section>
+
+        <div class="modal" style="display: none;">
+            <div>
+                <span id="exit-modal">X</span>
+                <span class="arrow" id="left">&lt;</span>
+                <img src="" alt="">
+                <span class="arrow" id="right">&gt;</span>
+            </div>
+        </div>
+
+        <section id="contact" class="form">
             <div class="interface">
                 <h2 class="title">FALA <span>COMIGO.</span></h2>
                 <form action="#">
@@ -148,6 +192,12 @@
         </section>
     </main>
 
+    <div id="whats">
+        <a href="#">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+
     <footer>
         <div class="interface">
             <div class="line-footer">
@@ -156,18 +206,25 @@
                         <p style="color: #fff;">LOGO</p>
                         <!-- <img src="src/images/logo.png" alt=""> -->
                     </div>
-                    <!-- <p>logo</p> -->
                     <div class="btn-social">
-                        <a href="#"><button><i class="bi bi-instagram"></i></button></a>
-                        <a href="#"><button><i class="bi bi-facebook"></i></button></a>
-                        <a href="#"><button><i class="bi bi-linkedin"></i></button></a>
+                        <a target="_blank" href="https://www.instagram.com/marcelosouza5224"><button><i
+                                    class="bi bi-instagram"></i></button></a>
+                        <a target="_blank" href="https://www.facebook.com/profile.php?id=100015225941991"><button><i
+                                    class="bi bi-facebook"></i></button></a>
+                        <a target="_blank"
+                            href="https://www.linkedin.com/in/francisco-marcelo-da-silva-souza-496016152/"><button><i
+                                    class="bi bi-linkedin"></i></button></a>
+                        <a target="_blank" href="https://github.com/marcelo-site"><button><i
+                                    class="bi bi-github"></i></button></a>
                     </div>
                 </div>
             </div>
             <div class="line-footer">
-                <p><i class="bi bi-envelope-at-fill"></i><a target="_blank"
-                        href="mailto:franiscomarcelo@gmail.com">franiscomarcelo@gmail.com</a></p>
+                <p><i class="bi bi-envelope-at-fill"></i><a href="mailto:franiscomarcelo@gmail.com">
+                        franiscomarcelo@gmail.com</a></p>
             </div>
+            <div style="text-align: center;">Todos os direitos reservados &copy; 2023 | Criado por <a target="_blank"
+                    href="https://www.facebook.com/profile.php?id=100015225941991">Marcelo</a></div>
         </div>
     </footer>
 </body>

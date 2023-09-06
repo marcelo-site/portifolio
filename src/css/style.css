@@ -7,11 +7,18 @@
 }
 
 :root {
-    --primary-color: #000;
-    --shadow-black: #ffffff16;
+    --primary-color: #0f0f0f;
+    --shadow-color: #ffffff16;
     --secondary-color: #fff;
     --trirty-color: #00ff08;
     --shadow-green: #00ff08e4;
+    --border-color: #ffffff75;
+}
+
+.dark:root {
+    --secondary-color: #212238;
+    --primary-color: #fafafa;
+    --shadow-color: #bababaa6;
 }
 
 html {
@@ -19,9 +26,10 @@ html {
 }
 
 body {
-    background-color: #000;
+    background-color: var(--primary-color);
     height: 100vh;
-    color: white;
+    color: var(--secondary-color);
+    transition: background .3s linear;
 }
 
 .interface {
@@ -81,7 +89,7 @@ section {
 header {
     background-color: var(--primary-color);
     padding: 1.2em 4%;
-    box-shadow: 0px 0px 40px 10px #070707;
+    box-shadow: 0px 0px 40px 10px var(--shadow-color);
     position: fixed;
     width: 100%;
     position: fixed;
@@ -89,6 +97,7 @@ header {
     left: 0;
     z-index: 1;
     width: 100%;
+    transition: background .3s linear;
 }
 
 header>.interface {
@@ -104,9 +113,9 @@ header a {
 }
 
 header nav.menu-desktop a:hover {
-    color: #fff;
+    color: var(--secondary-color);
     display: inline-block;
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 header nav.menu-desktop ul {
@@ -120,6 +129,48 @@ header nav.menu-desktop ul li {
 
 main {
     margin-top: 4em;
+}
+
+/* change theme */
+.btn-theme {
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .3em;
+
+    padding: .3em;
+    position: relative;
+    height: 1.6em;
+    width: 3.1em;
+}
+
+span.ball {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    top: .15em;
+    left: .15em;
+    height: 1.3em;
+    width: 1.3em;
+
+    transform: translateX(0);
+    transition: transform .3s;
+}
+
+#chk:checked + .btn-theme .ball {
+    transform: translateX(1.4em);
+}
+
+.btn-theme i {
+    color: var(--primary-color);
+}
+
+.bi-brightness-high-fill {
+    font-size: 1.2em;
 }
 
 /* menu mobile */
@@ -160,13 +211,12 @@ main {
 }
 
 .menu-mobile ul li {
-    color: white;
     font-size: 1.2em;
     font-weight: 300;
 }
 
 .menu-mobile ul li a {
-    color: white;
+    color: var(--secondary-color);
     display: block;
     padding: .5em 6%;
 }
@@ -202,7 +252,6 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site h2 {
-    color: #fff;
     font-size: 2em;
     line-height: 1em;
 }
@@ -252,7 +301,7 @@ section.especs .flex {
 }
 
 section.especs h2 {
-    margin-bottom: 2em;
+    margin-bottom: 1.5em;
 }
 
 .especs .box-especs {
@@ -320,7 +369,7 @@ section.sobre .flex {
 /* portifólio */
 section.portifolio {
     padding: 4em 4%;
-    box-shadow: 0px 0px 40px 10px var(--shadow-black);
+    box-shadow: 0px 0px 40px 10px var(--shadow-color);
 }
 
 section.portifolio .flex {
@@ -396,6 +445,7 @@ section.certs>div>div {
     background-color: #000000c9;
     font-size: 1.5em;
     padding: 0.2em;
+    color: white;
 }
 
 /* modal */
@@ -454,7 +504,7 @@ section.certs>div>div {
 /* form */
 section.form {
     padding: 4em 4%;
-    box-shadow: 0px 0px 40px 10px var(--shadow-black);
+    box-shadow: 0px 0px 40px 10px var(--shadow-color);
 }
 
 form {
@@ -492,7 +542,7 @@ form input[type='submit'] {
     width: 5em;
     padding: .5em .8em;
     width: 6em;
-    color: var(--primary-color);
+    color: #0f0f0f;
     background-color: var(--trirty-color);
     font-weight: 700;
     cursor: pointer;
@@ -501,16 +551,15 @@ form input[type='submit'] {
 
 /* whats */
 #whats {
-    height: 3em;
     position: fixed;
-    bottom: 40px;
+    bottom: 20px;
     left: 20px;
-    width: 3em;
 }
-#whats i{
+
+#whats i {
     border-radius: 50%;
     padding: 0.1em 0.3em;
-    font-size: 3em;
+    font-size: 2.5em;
     background-color: var(--trirty-color);
     color: #000;
 }
@@ -547,7 +596,6 @@ footer .logo-footer {
 }
 
 @media screen and (max-width: 1020px) {
-
     /* geral */
     .flex {
         flex-direction: column;
@@ -558,8 +606,8 @@ footer .logo-footer {
     }
 
     .topo-do-site h2 {
-      font-size: 1.5em;  
-    } 
+        font-size: 1.5em;
+    }
 
     .img-port {
         width: 90vw;

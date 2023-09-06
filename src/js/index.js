@@ -64,4 +64,14 @@ left.addEventListener('click', () => {
     }
 })
 
+const chk = document.querySelector('#chk')
 
+chk.addEventListener('change', () => {
+   const html = document.querySelector('html')
+   html.classList.toggle('dark')
+    localStorage.removeItem('dark')
+
+    if(html.classList.contains('dark')) {
+        localStorage.setItem('dark', 1)
+    }
+})

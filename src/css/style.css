@@ -240,6 +240,11 @@ span.ball {
     display: block;
 }
 
+.bi-list {
+    padding: 0 0.1em;
+    background-color: #0f0f0f;
+}
+
 /* top */
 section.topo-do-site {
     padding: 2.5em 4%;

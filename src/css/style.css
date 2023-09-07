@@ -235,7 +235,7 @@ span.ball {
 
 .menu-mobile .btn-fechar {
     margin: 0.5em;
-    color: var(--trirty-color);
+    color: var(--bi-list-color);
     font-size: 1.6em;
     padding: 0 0.3em;
     border: 2px solid;

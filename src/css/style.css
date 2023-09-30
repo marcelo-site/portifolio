@@ -1,4 +1,3 @@
-/* geral */
 * {
     margin: 0;
     padding: 0;
@@ -7,21 +6,21 @@
 }
 
 :root {
+    --primary-color: #f7f7f7;
     --secondary-color: #212238;
-    --primary-color: #fafafa;
     --shadow-color: #bababaa6;
-    --border-color: #00000075;
-    --bg-especs: #f2f2f2;
+    --border-color: #0000004d;
+    --bg-especs: #fafafa;
     --trirty-color: #00ff08;
     --shadow-green: #00ff08e4;
     --bi-list-color: #000;
 }
 
 .dark:root {
-    --primary-color: #0f0f0f;
+    --primary-color: #0e0e0e;
     --secondary-color: #fff;
-    --shadow-color: #ffffff16;
-    --border-color: #ffffff75;
+    --shadow-color: #525252cf;
+    --border-color: #ffffff5e;
     --bg-especs: #1e1e1e;
     --bi-list-color: #00ff08;
 }
@@ -46,18 +45,19 @@ body {
     display: flex;
 }
 
-.btn-contato button {
+.btn-contato button, .btn {
     padding: 0.5em 2em;
     font-size: 1em;
     font-weight: 600;
     background-color: #00ff08;
+    color: black;
     border: 0;
     border-radius: 2em;
     cursor: pointer;
     transition: .2s;
 }
 
-button:hover,
+button:hover, .btn:hover,
 form input[type='submit']:hover {
     box-shadow: 0px 0px 8px var(--shadow-green);
     transform: scale(1.05);
@@ -94,7 +94,7 @@ section {
 header {
     background-color: var(--primary-color);
     padding: 1.2em 4%;
-    box-shadow: 0px 0px 40px 10px var(--shadow-color);
+    box-shadow: 0px 0px 25px var(--shadow-color);
     position: fixed;
     top: 0;
     left: 0;
@@ -300,7 +300,7 @@ section.especs {
 }
 
 section.especs .flex {
-    gap: 2em;
+    gap: 1.5em;
 }
 
 section.especs h2 {
@@ -317,7 +317,7 @@ section.especs h2 {
 
 .especs .box-especs:hover {
     transform: scale(1.05);
-    box-shadow: 0px 0px 15px #ffffff83;
+    box-shadow: 0px 0px 15px var(--shadow-color);
 }
 
 .especs .box-especs i {
@@ -376,46 +376,44 @@ section.portifolio {
     box-shadow: 0px 0px 40px 10px var(--shadow-color);
 }
 
-section.portifolio .flex {
-    gap: 1.2em;
-    justify-content: space-between;
+.portifolio div.interface > .flex {
+    gap: 1.5rem;
+}
+
+.portifolio div.interface > .flex > div {
+    width: 30vw;
     margin-top: 2em;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--bg-especs);
+    transition: .2s;
 }
 
-.img-port {
+section.portifolio div.interface > .flex > div:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 15px var(--shadow-color);
+}
+
+.portifolio img {
     width: 100%;
-    max-width: 360px;
-    height: 460px;
-    background-image: url(../images/imagem.jpg);
-    background-size: cover;
-    background-position: 100% 0%;
-    cursor: pointer;
-    transition: 8s;
-    overflow: hidden;
-    border-radius: 2em;
-    position: relative;
 }
 
-.img-port:hover {
-    background-position: 100% 100%;
+.project-info {
+    padding: 1rem;
 }
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #0000009e;
-    display: flex;
-    align-items: center;
+.project-info h3 {
+    font-size: 1.5rem;
+}
+.project-info .flex {
+    flex-direction: column;
+    gap: .6rem;
+    margin: 1rem; 
     justify-content: center;
-    font-weight: 600;
-    opacity: 0;
+    align-items: center;
 }
 
-.overlay:hover {
-    opacity: 1;
+.project-info p {
+    text-align: justify;
 }
 
 /* certificados */
@@ -618,10 +616,6 @@ footer .logo-footer {
         font-size: 1.5em;
     }
 
-    .img-port {
-        width: 90vw;
-    }
-
     section.portifolio .flex {
         align-items: center;
         gap: 1em;
@@ -656,6 +650,9 @@ footer .logo-footer {
         font-size: 2.2em;
     }
 
+    .portifolio div.interface > .flex > div {
+        width: 90vw;
+    }
     section.certs>div>div {
         grid-template-columns: repeat(2, 1fr);
     }

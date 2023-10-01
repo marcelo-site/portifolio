@@ -261,7 +261,7 @@ span.ball {
 
 /* top */
 section.topo-do-site {
-    padding: 2.5em 4%;
+    padding: 2.5em 4% 1rem;
 }
 
 section.topo-do-site .flex {

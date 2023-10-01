@@ -78,3 +78,25 @@ const dark_ok = () => {
     }
 }
 dark_ok()
+
+const exitModalMsg = () => {
+    document.querySelector('.modal-msg').style.display = 'none'
+}
+
+function submit(e) {
+    e.preventDefault()
+    const name = e.target.name.value
+    const email = e.target.email.value
+    const msg = e.target.msg.value
+
+    let text = `Olá tenho interesse nos seus serviços, \n \n`
+    text += `*Meu nome*: ${name} \n`
+    text += `*Meu e-mail*: ${email} \n`
+    text += `*Mensagem:* \n ${msg}`
+
+    const textUrl = window.encodeURIComponent(text)
+    const whats = document.querySelector('#msg-form')
+    whats.href = `https://api.whatsapp.com/send?phone=5581991869812&text=${textUrl}`
+    document.querySelector('.modal-msg').style.display = ''
+}
+document.querySelector('form').addEventListener('submit', submit)

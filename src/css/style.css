@@ -57,6 +57,10 @@ body {
     transition: .2s;
 }
 
+a.btn {
+    text-decoration: none;
+}
+
 button:hover, .btn:hover,
 form input[type='submit']:hover {
     box-shadow: 0px 0px 8px var(--shadow-green);
@@ -64,6 +68,7 @@ form input[type='submit']:hover {
 }
 
 h2.title {
+    margin-bottom: .5rem;
     font-size: 2.5em;
     text-align: center;
 }
@@ -271,7 +276,7 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .txt-topo-site {
-    flex: 1.8;
+    flex: 1.5;
 }
 
 .topo-do-site .img-topo-site {
@@ -308,6 +313,7 @@ section.especs h2 {
 }
 
 .especs .box-especs {
+    width: 30vw;
     background-color: var(--bg-especs);
     border: 1px solid var(--border-color);
     padding: 1.8em;
@@ -318,6 +324,10 @@ section.especs h2 {
 .especs .box-especs:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 15px var(--shadow-color);
+}
+
+.especs .box-especs p {
+    /* text-align: justify; */
 }
 
 .especs .box-especs i {
@@ -407,7 +417,7 @@ section.portifolio div.interface > .flex > div:hover {
 .project-info .flex {
     flex-direction: column;
     gap: .6rem;
-    margin: 1rem; 
+    margin: 1rem 0; 
     justify-content: center;
     align-items: center;
 }
@@ -432,6 +442,7 @@ section.certs>div>div {
 }
 
 .certs img {
+    height: 100%;
     width: 100%;
 }
 
@@ -451,7 +462,7 @@ section.certs>div>div {
 }
 
 /* modal */
-.modal {
+.modal, .modal-msg {
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: center;
@@ -462,6 +473,23 @@ section.certs>div>div {
     align-items: center;
     left: 0;
     z-index: 1000;
+}
+
+.modal-msg > div {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 8px;
+
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+    padding: 3rem 2rem 2rem;
+}
+
+.modal-msg p {
+    color: #000;
+    margin-bottom: 1.5rem;
 }
 
 .modal>div {
@@ -491,7 +519,7 @@ section.certs>div>div {
     left: 0;
 }
 
-#exit-modal {
+.exit-modal {
     position: absolute;
     top: 0;
     right: 0;
@@ -527,9 +555,15 @@ form textarea {
     border: none;
     outline: none;
     padding: 1em .8em;
-    color: white;
+    color: var(--secondary-color);
     border-radius: 10px;
     font-size: 1em;
+    outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+    background-color: #807e7e8c;
 }
 
 form textarea {
@@ -651,6 +685,9 @@ footer .logo-footer {
     }
 
     .portifolio div.interface > .flex > div {
+        width: 90vw;
+    }
+    .especs .box-especs {
         width: 90vw;
     }
     section.certs>div>div {

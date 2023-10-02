@@ -202,7 +202,7 @@ span.ball {
 
 .btn-abrir-menu i {
     color: var(--bi-list-color);
-    border: 2px solid;
+    border: 1px solid;
     font-size: 1.6em;
 }
 
@@ -243,7 +243,7 @@ span.ball {
     color: var(--bi-list-color);
     font-size: 1.6em;
     padding: 0 0.3em;
-    border: 2px solid;
+    border: 1px solid;
     display: inline-block;
 }
 

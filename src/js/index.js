@@ -1,3 +1,25 @@
+const checkDark = document.querySelector('#change-theme')
+
+checkDark.addEventListener('change', (check) => {
+    const html = document.querySelector('html')
+    localStorage.removeItem('dark')
+    if (check.target.checked) {
+        html.classList.add('dark')
+    } else {
+        html.classList.remove('dark')
+    }
+    if (html.classList.contains('dark')) {
+        localStorage.setItem('dark', 1)
+    }
+})
+const darkTrue = () => {
+    if (localStorage?.getItem('dark')) {
+        checkDark.checked = true
+        document.querySelector('html').classList.add('dark')
+    }
+}
+darkTrue()
+
 const btnMenu = document.querySelector('.btn-abrir-menu')
 const menuMobile = document.querySelector('#menu-mobile')
 const overlay = document.querySelector('.overlay-menu')
@@ -23,16 +45,11 @@ const changeImg = (param) => {
     modal.style.display = ''
     const height = modalImg.clientHeight
     modalContent.style.height = `${height}px`
-    if (indexImg == certs.length - 1) {
-        right.style.backgroundColor = '#626262'
-    } else {
-        right.style.backgroundColor = ''
-    }
-    if (indexImg === 0) {
-        left.style.backgroundColor = '#626262'
-    } else {
-        left.style.backgroundColor = ''
-    }
+    if (indexImg == certs.length - 1) right.style.backgroundColor = '#626262'
+    else right.style.backgroundColor = ''
+
+    if (indexImg === 0) left.style.backgroundColor = '#626262'
+    else left.style.backgroundColor = ''
 }
 
 let indexImg = 0
@@ -55,44 +72,14 @@ left.addEventListener('click', () => {
     }
 })
 
-const checkDark = document.querySelector('#change-theme')
-
-checkDark.addEventListener('change', (check) => {
-    const html = document.querySelector('html')
-    localStorage.removeItem('dark')
-    if (check.target.checked) {
-        html.classList.add('dark')
-    } else {
-        html.classList.remove('dark')
-    }
-    if (html.classList.contains('dark')) {
-        localStorage.setItem('dark', 1)
-    }
-})
-
-const dark_ok = () => {
-    const dark = localStorage.getItem('dark')
-    if (dark) {
-        checkDark.checked = true
-        document.querySelector('html').classList.add('dark')
-    }
-}
-dark_ok()
-
-const exitModalMsg = () => {
-    document.querySelector('.modal-msg').style.display = 'none'
-}
+const exitModalMsg = () => document.querySelector('.modal-msg').style.display = 'none'
 
 function submit(e) {
     e.preventDefault()
-    const name = e.target.name.value
-    const email = e.target.email.value
-    const msg = e.target.msg.value
-
     let text = `Olá tenho interesse nos seus serviços, \n \n`
-    text += `*Meu nome*: ${name} \n`
-    text += `*Meu e-mail*: ${email} \n`
-    text += `*Mensagem:* \n ${msg}`
+    text += `*Meu nome*: ${e.target.name.value} \n`
+    text += `*Meu e-mail*: ${e.target.email.value} \n`
+    text += `*Mensagem:* \n ${e.target.msg.value}`
 
     const textUrl = window.encodeURIComponent(text)
     const whats = document.querySelector('#msg-form')

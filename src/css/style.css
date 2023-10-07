@@ -8,6 +8,7 @@
 :root {
     --primary-color: #f7f7f7;
     --secondary-color: #212238;
+    --font-color: #212238;
     --shadow-color: #bababaa6;
     --border-color: #0000004d;
     --bg-especs: #fafafa;
@@ -17,11 +18,12 @@
 }
 
 .dark:root {
-    --primary-color: #0e0e0e;
+    --primary-color: #0c0d0f;
     --secondary-color: #fff;
+    --font-color: #74767b;
     --shadow-color: #525252cf;
     --border-color: #ffffff5e;
-    --bg-especs: #1e1e1e;
+    --bg-especs: #141518;
     --bi-list-color: #00ff08;
 }
 
@@ -34,6 +36,10 @@ body {
     height: 100vh;
     color: var(--secondary-color);
     transition: background .3s linear;
+}
+
+p {
+    color: var(--font-color);
 }
 
 .interface {
@@ -289,7 +295,7 @@ section.topo-do-site .flex {
 }
 
 .topo-do-site .txt-topo-site a {
-    color: var(--secondary-color);
+    color: var(--font-color);
 }
 
 .topo-do-site .img-topo-site img {

@@ -383,6 +383,7 @@ section.sobre .flex {
 }
 
 #sobre .img-sobre img {
+    outline:  5px solid #ecebeb;
     border-radius: 10px;
 }
 

@@ -382,6 +382,10 @@ section.sobre .flex {
     margin: 0 .3em;
 }
 
+#sobre .img-sobre img {
+    border-radius: 10px;
+}
+
 .sobre .btn-social button i {
     font-size: 1.5em;
 }

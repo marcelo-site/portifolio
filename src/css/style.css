@@ -12,10 +12,6 @@
     --shadow-color: #bababaa6;
     --border-color: #0000004d;
     --bg-especs: #fafafa;
-    /* --trirty-color: #00ff08; */
-    --trirty-color: #02026b;
-    --trirty-color: #20208a;
-    --trirty-color: #1d1d86;
     --trirty-color: #2525a6;
     --trirty-color: #1d1d9d;
     --shadow-green: #00ff08e4;
@@ -64,7 +60,6 @@ p {
     font-size: 1em;
     font-weight: 600;
     background-color: var(--trirty-color);
-    /* color: black; */
     color: white;
     border: 0;
     border-radius: 2em;
@@ -618,7 +613,6 @@ form input[type='submit'] {
     width: 5em;
     padding: .5em .8em;
     width: 6em;
-    /* color: #0f0f0f; */
     color: white;
     background-color: var(--trirty-color);
     font-weight: 700;
@@ -637,8 +631,6 @@ form input[type='submit'] {
     border-radius: 50%;
     padding: 4px 12px;
     font-size: 2.5rem;
-    /* background-color: var(--trirty-color); */
-    background-color: #00ff08;
     background-color: #0d9611;
     color: #000;
     color: white;

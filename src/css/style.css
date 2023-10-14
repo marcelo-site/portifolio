@@ -13,7 +13,13 @@
     --border-color: #0000004d;
     --bg-especs: #fafafa;
     --trirty-color: #2525a6;
-    --trirty-color: #1d1d9d;
+    --trirty-color: #00002A;
+    --trirty-color: #141475;
+    --trirty-color: #19199f;
+    /* --trirty-color: #1d1d9d; */
+    /* --txt-shadow: 0px 0px 1px #ffffff62; */
+    
+    /* --shadow-1px: 0px 0px 1px #000000; */
     --shadow-green: #00ff08e4;
     --shadow-green: #6565cfbf;
     --shadow-green: #7373e2;
@@ -25,6 +31,10 @@
     --secondary-color: #fff;
     --font-color: #9fa0a0;
     --shadow-color: #525252cf;
+    /* --trirty-color: white; */
+    /* --trirty-color: #4a4add; */
+    /* --shadow-1px: 0px 0px 1px #000000; */
+    --shadow-1px: 0px 0px 1px #ffffff85;
     --border-color: #ffffff5e;
     --bg-especs: #141518;
     --bi-list-color: #00ff08;
@@ -66,6 +76,8 @@ p {
     border-radius: 2em;
     cursor: pointer;
     transition: .2s;
+    box-shadow: var(--shadow-1px);
+    /* box-shadow: 0px 0px 5px #ffffff62; */
 }
 
 a.btn {
@@ -87,6 +99,9 @@ h2.title {
 
 h2.title span {
     color: var(--trirty-color);
+    /* color: #6f6ffe; */
+    /* text-shadow: 0px 0px 2px #a9a9a974; */
+    text-shadow: var(--shadow-1px);
 }
 
 .btn-social button {
@@ -347,6 +362,7 @@ section.especs h2 {
 .especs .box-especs i {
     font-size: 4em;
     color: var(--trirty-color);
+    text-shadow: var(--shadow-1px);
 
 }
 
@@ -373,6 +389,7 @@ section.sobre .flex {
 .txt-sobre h2 span {
     display: block;
     color: var(--trirty-color);
+    text-shadow: var(--shadow-1px);
 }
 
 .sobre .txt-sobre p {

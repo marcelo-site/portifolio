@@ -61,7 +61,9 @@ p {
     padding: 0.5em 2em;
     font-size: 1em;
     font-weight: 600;
-    background-color: var(--trirty-color);
+    /* background-color: var(--trirty-color); */
+    background-color: #25259f;
+    background-color: #19199f;
     color: white;
     border: 0;
     border-radius: 2em;
@@ -95,17 +97,8 @@ h2.title span {
     text-shadow: var(--shadow-1px);
 }
 
-.btn-social button {
-    width: 3.5em;
-    height: 3.5em;
-    border-radius: 50%;
-    border: none;
-    background-color: var(--trirty-color);
-    cursor: pointer;
-    margin: 0 .3em;
-}
-
 .btn-social button i {
+    
     font-size: 2em;
 }
 
@@ -354,7 +347,6 @@ section.especs h2 {
     font-size: 4em;
     color: var(--trirty-color);
     text-shadow: var(--shadow-1px);
-
 }
 
 .especs .box-especs h3 {
@@ -394,9 +386,11 @@ section.sobre .flex {
     border-radius: 50%;
     border: none;
     background-color: var(--trirty-color);
+    background-color: #19199f;
+    background-color: #13138e;
     color: white;
     cursor: pointer;
-    margin: 0 .3em;
+    margin: 1em .3em 0;
 }
 
 #sobre .img-sobre img {
@@ -624,6 +618,7 @@ form input[type='submit'] {
     width: 6em;
     color: white;
     background-color: var(--trirty-color);
+    background-color: #13138e;
     font-weight: 700;
     cursor: pointer;
     transition: .2s;

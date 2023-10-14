@@ -104,7 +104,7 @@ section {
 /* cabecalho */
 header {
     background-color: var(--primary-color);
-    padding: 1.2em 4%;
+    padding: .5em 4% .3em;
     box-shadow: 0px 0px 25px var(--shadow-color);
     position: fixed;
     top: 0;
@@ -115,15 +115,21 @@ header {
 }
 
 header>.interface {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: .5em;
 }
 
 header a {
     color: #7d7d7d;
     text-decoration: none;
     transition: .2s;
+}
+
+header nav ul {
+    display: flex;
 }
 
 header nav.menu-desktop a:hover {
@@ -138,7 +144,7 @@ header nav.menu-desktop ul {
 
 header nav.menu-desktop ul li {
     display: inline-block;
-    padding: 0 40px;
+    padding: 0 1.5em;
 }
 
 main {
@@ -660,9 +666,9 @@ footer .logo-footer {
         flex-direction: column;
     }
 
-    .container-change-theme {
+    /* .container-change-theme {
         right: .5em;
-    }
+    } */
 
     .topo-do-site .flex {
         flex-direction: column-reverse;

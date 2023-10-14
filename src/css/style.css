@@ -12,8 +12,15 @@
     --shadow-color: #bababaa6;
     --border-color: #0000004d;
     --bg-especs: #fafafa;
-    --trirty-color: #00ff08;
+    /* --trirty-color: #00ff08; */
+    --trirty-color: #02026b;
+    --trirty-color: #20208a;
+    --trirty-color: #1d1d86;
+    --trirty-color: #2525a6;
+    --trirty-color: #1d1d9d;
     --shadow-green: #00ff08e4;
+    --shadow-green: #6565cfbf;
+    --shadow-green: #7373e2;
     --bi-list-color: #000;
 }
 
@@ -51,12 +58,14 @@ p {
     display: flex;
 }
 
-.btn-contato button, .btn {
+.btn-contato button,
+.btn {
     padding: 0.5em 2em;
     font-size: 1em;
     font-weight: 600;
-    background-color: #00ff08;
-    color: black;
+    background-color: var(--trirty-color);
+    /* color: black; */
+    color: white;
     border: 0;
     border-radius: 2em;
     cursor: pointer;
@@ -67,9 +76,10 @@ a.btn {
     text-decoration: none;
 }
 
-button:hover, .btn:hover,
+button:hover,
+.btn:hover,
 form input[type='submit']:hover {
-    box-shadow: 0px 0px 8px var(--shadow-green);
+    box-shadow: 0px 0px 12px var(--shadow-green);
     transform: scale(1.05);
 }
 
@@ -180,7 +190,7 @@ span.ball {
     transition: transform .3s;
 }
 
-#change-theme:checked + .btn-theme .ball {
+#change-theme:checked+.btn-theme .ball {
     transform: translateX(1.9em);
 }
 
@@ -380,12 +390,13 @@ section.sobre .flex {
     border-radius: 50%;
     border: none;
     background-color: var(--trirty-color);
+    color: white;
     cursor: pointer;
     margin: 0 .3em;
 }
 
 #sobre .img-sobre img {
-    outline:  5px solid #ecebeb;
+    outline: 5px solid #ecebeb;
     border-radius: 10px;
 }
 
@@ -403,7 +414,7 @@ section.portifolio {
     gap: 1.5rem;
 }
 
-.portifolio div.interface > .flex > div {
+.portifolio div.interface>.flex>div {
     width: 30vw;
     margin-top: 2em;
     border-radius: .8em;
@@ -412,7 +423,7 @@ section.portifolio {
     transition: .2s;
 }
 
-section.portifolio div.interface > .flex > div:hover {
+section.portifolio div.interface>.flex>div:hover {
     transform: scale(1.05);
     box-shadow: 0px 0px 15px var(--shadow-color);
 }
@@ -424,13 +435,15 @@ section.portifolio div.interface > .flex > div:hover {
 .project-info {
     padding: 1rem;
 }
+
 .project-info h3 {
     font-size: 1.5rem;
 }
+
 .project-info .flex {
     flex-direction: column;
     gap: .6rem;
-    margin: 1rem 0; 
+    margin: 1rem 0;
     justify-content: center;
     align-items: center;
 }
@@ -487,7 +500,8 @@ section.certs>div>div {
 }
 
 /* modal */
-.modal, .modal-msg {
+.modal,
+.modal-msg {
     background-color: rgba(0, 0, 0, 0.75);
     display: flex;
     justify-content: center;
@@ -500,7 +514,7 @@ section.certs>div>div {
     z-index: 1000;
 }
 
-.modal-msg > div {
+.modal-msg>div {
     font-size: 1.2rem;
     padding: 1.5rem;
     text-align: center;
@@ -604,7 +618,8 @@ form input[type='submit'] {
     width: 5em;
     padding: .5em .8em;
     width: 6em;
-    color: #0f0f0f;
+    /* color: #0f0f0f; */
+    color: white;
     background-color: var(--trirty-color);
     font-weight: 700;
     cursor: pointer;
@@ -622,8 +637,10 @@ form input[type='submit'] {
     border-radius: 50%;
     padding: 4px 12px;
     font-size: 2.5rem;
-    background-color: var(--trirty-color);
+    /* background-color: var(--trirty-color); */
+    background-color: #00ff08;
     color: #000;
+    color: white;
 }
 
 /* rodapé */
@@ -653,8 +670,22 @@ footer a {
     color: var(--secondary-color);
 }
 
-footer .logo-footer {
-    margin-bottom: 1em;
+.logo img,
+.logo-footer img {
+    width: 100%;
+}
+
+
+.logo-footer {
+    flex: 1;
+}
+
+.btn-social {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+    align-items: center;
+    text-align: center;
 }
 
 @media (min-width: 1020px) {
@@ -714,18 +745,16 @@ footer .logo-footer {
         font-size: 2.2em;
     }
 
-    .portifolio div.interface > .flex > div {
+    .portifolio div.interface>.flex>div {
         width: 90vw;
     }
+
     .especs .box-especs {
         width: 90vw;
     }
+
     section.certs>div>div {
         grid-template-columns: repeat(2, 1fr);
-    }
-
-    .btn-social {
-        text-align: center;
     }
 
     .btn-abrir-menu {
@@ -735,6 +764,10 @@ footer .logo-footer {
     .menu-desktop,
     .btn-contato {
         display: none;
+    }
+
+    footer .logo-footer {
+        margin-bottom: 2em;
     }
 
     footer .line-footer {

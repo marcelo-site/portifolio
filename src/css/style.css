@@ -7,14 +7,13 @@
 
 :root {
     --primary-color: #f7f7f7;
+    --primary-color: #fbfbfb;
     --secondary-color: #212238;
     --font-color: #212238;
     --shadow-color: #bababaa6;
     --border-color: #0000004d;
-    --bg-especs: #fafafa;
+    --bg-especs: #ffffff;
     --trirty-color: #19199f;
-    --shadow-green: #00ff08e4;
-    --shadow-green: #6565cfbf;
     --shadow-green: #7373e2;
     --bi-list-color: #000;
 }
@@ -61,8 +60,6 @@ p {
     padding: 0.5em 2em;
     font-size: 1em;
     font-weight: 600;
-    /* background-color: var(--trirty-color); */
-    background-color: #25259f;
     background-color: #19199f;
     color: white;
     border: 0;
@@ -70,7 +67,6 @@ p {
     cursor: pointer;
     transition: .2s;
     box-shadow: var(--shadow-1px);
-    /* box-shadow: 0px 0px 5px #ffffff62; */
 }
 
 a.btn {
@@ -92,8 +88,6 @@ h2.title {
 
 h2.title span {
     color: var(--trirty-color);
-    /* color: #6f6ffe; */
-    /* text-shadow: 0px 0px 2px #a9a9a974; */
     text-shadow: var(--shadow-1px);
 }
 
@@ -385,8 +379,6 @@ section.sobre .flex {
     height: 3.5em;
     border-radius: 50%;
     border: none;
-    background-color: var(--trirty-color);
-    background-color: #19199f;
     background-color: #13138e;
     color: white;
     cursor: pointer;
@@ -617,7 +609,6 @@ form input[type='submit'] {
     padding: .5em .8em;
     width: 6em;
     color: white;
-    background-color: var(--trirty-color);
     background-color: #13138e;
     font-weight: 700;
     cursor: pointer;
@@ -672,7 +663,6 @@ footer a {
     width: 100%;
 }
 
-
 .logo-footer {
     flex: 1;
 }
@@ -695,10 +685,6 @@ footer a {
     .flex {
         flex-direction: column;
     }
-
-    /* .container-change-theme {
-        right: .5em;
-    } */
 
     .topo-do-site .flex {
         flex-direction: column-reverse;
